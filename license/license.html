@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="./license.css">
+        <script src="./license.js" defer></script>
+    </head>
+
+    <body class="bg-white font-sans antialiased">
+        <div x-data="Unlock" class="min-h-screen flex flex-col justify-center px-6 lg:px-8">
+            <div class="cursor-move h-10 w-full absolute left-0 top-0" style="-webkit-app-region: drag;"></div>
+            <div x-show="!isReady"
+                class="fixed left-0 flex h-full justify-center align-middle items-center min-h-screen w-full bg-white z-10">
+                <div>
+                    <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div x-show="isReady" x-cloak x-transition:enter="duration-300 ease-out"
+                x-transition:leave="duration-200 ease-in" x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100" x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0">
+                <div class="mx-auto w-full max-w-md"> 
+                    <div class="mx-auto h-12 w-auto">
+                        <svg width="139" height="139" viewBox="0 0 139 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.9891 1.43456C49.85 2.97939 38.6703 7.32932 30.0111 13.5493C26.2303 16.2324 19.5225 22.2085 19.5225 22.8183C19.5225 23.0216 20.7827 23.1842 22.2869 23.1842C29.5639 23.1842 42.4917 25.6234 51.0289 28.6724C60.0134 31.8434 66.1114 34.8518 73.9982 40.0961C98.5123 56.3981 114.692 82.701 118.107 112.053C118.433 114.939 118.717 117.663 118.717 118.11C118.717 118.761 119.124 118.476 120.546 116.891C129.775 106.687 135.548 94.9783 138.068 81.522C139.166 75.6272 139.084 63.7971 137.906 57.2925C134.572 39.1204 123.514 22.4118 107.944 12.1264C94.5282 3.26397 76.9252 -0.760735 60.9891 1.43456Z" fill="url(#paint0_linear_1130_2267)"/>
+                            <path d="M48.3049 36.1523C62.2084 48.389 68.4691 66.7644 65.0542 85.3024C62.7369 98.1082 54.0777 111.117 42.9386 118.516C39.4424 120.834 33.9949 123.557 30.9865 124.452C30.0108 124.736 29.3197 125.143 29.401 125.387C29.8482 126.688 40.3775 132.501 45.947 134.493C54.6469 137.623 61.1514 138.762 70.3391 138.721C78.9577 138.721 85.9501 137.461 93.8369 134.574C99.3657 132.542 106.968 128.476 110.749 125.509L112.334 124.248L112.05 120.183C111.155 106.971 108.106 95.5877 102.049 83.1477C94.406 67.4555 82.6165 53.9585 68.1845 44.4456C61.8425 40.2583 51.5165 35.1766 45.9877 33.5504C45.4185 33.3878 46.3129 34.3635 48.3049 36.1523Z" fill="url(#paint1_linear_1130_2267)"/>
+                            <path d="M33.5072 34.851C34.117 38.2253 34.1576 39.5262 33.5885 42.25C32.5721 47.0877 29.4825 51.0718 25.1732 53.0638C18.5467 56.0722 11.7575 54.8932 6.83846 49.8522L4.56186 47.5349L4.11467 48.8765C1.59415 56.8852 0.374546 67.9023 1.18762 76.033C2.73245 91.6847 9.6029 106.726 20.0102 117.378C23.2625 120.711 22.6933 120.589 28.2629 118.841C44.443 113.678 56.8016 99.1242 59.4035 82.1311C60.1352 77.212 59.6474 68.1056 58.3871 63.4305C55.7446 53.8362 49.7279 44.8518 42.0444 38.957C39.6052 37.1276 34.1576 33.7534 33.5885 33.7534C33.4259 33.7534 33.3852 34.2412 33.5072 34.851Z" fill="url(#paint2_linear_1130_2267)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_1130_2267" x1="115.663" y1="104.867" x2="31.5414" y2="27.3761" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3F0007"/>
+                            <stop offset="1" stop-color="#CC051C"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_1130_2267" x1="96.2219" y1="126.584" x2="24.7502" y2="75.4254" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3F0007"/>
+                            <stop offset="1" stop-color="#CC051C"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_1130_2267" x1="48.3215" y1="110.091" x2="-7.10636" y2="75.8005" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3F0007"/>
+                            <stop offset="1" stop-color="#CC051C"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>                            
+                    </div>
+                    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900" x-text="prompt.title"></h2>
+                    <p class="mt-2 text-center text-sm text-gray-600" x-text="prompt.subtitle"></p>
+                </div>
+                <div class="mt-8 mx-auto w-full max-w-md">
+                    <form class="space-y-6 px-6" @submit.prevent="activateLicense">
+                        <template x-if="license.requireEmail">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700"
+                                    x-text="prompt.email"></label>
+                                <div class="mt-1 relative rounded-md shadow-sm">
+                                    <input id="email"
+                                        :class="{ 'border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500':( emailError !== null || licenseError !== null), 'border-gray-300 placeholder-gray-400 focus:ring-black focus:border-black': !emailError }"
+                                        x-model="email" type="email" placeholder="elon@tesla.com" required
+                                        class="appearance-none block w-full px-3 py-2 border rounded-md focus:outline-none text-sm">
+                                    <div x-show="( emailError || licenseError)"
+                                        class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                        <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <div>
+                            <label for="license-key" class="block text-sm font-medium text-gray-700"
+                                x-text="prompt.licenseKey"></label>
+                            <div class="mt-1 relative rounded-md shadow-sm">
+                                <input id="license-key"
+                                    :class="{ 'border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500': licenseError !== null, 'border-gray-300 placeholder-gray-400 focus:ring-black focus:border-black': !licenseError }"
+                                    x-model="licenseKey" type="password"
+                                    placeholder="8d49eddf-a282-4b7f-8a65-b64baa082dcf" required
+                                    class="appearance-none block w-full px-3 py-2 border rounded-md focus:outline-none text-sm">
+                                <div x-show="licenseError"
+                                    class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p x-show="licenseError" class="mt-2 text-xs text-red-600" x-text="licenseError"></p>
+                        </div>
+                        <div class="space-y-2">
+                            <button type="submit"
+                                :class="{ 'bg-gray-800 text-gray-100': loading, 'bg-black text-white': !loading }"
+                                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                                <svg x-show="loading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                <span x-show="!loading" x-text="prompt.activateLicense"></span>
+                            </button>
+
+                            <button type="button" @click="startTrial" x-show="!loading && license.trial.enabled"
+                                class="w-full flex justify-center py-2 px-4 bg-transparent text-gray-600 border border-transparent rounded-md text-sm font-medium focus:outline-none">
+                                <span x-text="prompt.trial"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div x-show="activated" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title"
+                    role="dialog" aria-modal="true">
+                    <div class="flex items-center justify-center min-h-screen pt-4 px-4 text-center">
+                        <div x-show="activated" class="fixed inset-0 bg-white transition-opacity" aria-hidden="true"
+                            x-transition:enter="duration-300 ease-out" x-transition:leave="duration-200 ease-in"
+                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+                        <div x-show="activated"
+                            class="inline-block rounded-lg px-4 text-left overflow-hidden transform transition-all align-middle w-full p-6"
+                            x-transition:enter="duration-300 ease-out" x-transition:leave="duration-200 ease-in"
+                            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                            <div>
+                                <div
+                                    class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                                    <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div class="mt-3 text-center sm:mt-5">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title"
+                                        x-text="confirmation.title"></h3>
+                                    <div class="mt-2">
+                                        <p class="text-sm text-gray-500" x-text="confirmation.subtitle"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
