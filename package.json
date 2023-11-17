@@ -13,7 +13,7 @@
         "license/license.css",
         "license/license.html",
         "license/license.js",
-        "license/assets/insight-logo.png"
+        "license/insight-logo.png"
     ],
     "keywords": [
         "electron",

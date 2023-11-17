@@ -5,6 +5,7 @@ mix.webpackConfig({
 });
 
 mix.copy('src/license.html', 'license');
+mix.copy('public/insight-logo.png', 'license');
 mix.js('src/license.js', 'license');
 mix.postCss("src/license.css", "license", [
     require("tailwindcss"),
