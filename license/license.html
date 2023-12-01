@@ -8,13 +8,13 @@
         <script src="./license.js" defer></script>
     </head>
 
-    <body class="bg-white font-sans antialiased">
+    <body class="bg-gray-900 font-sans antialiased">
         <div x-data="Unlock" class="min-h-screen flex flex-col justify-center px-6 lg:px-8">
             <div class="cursor-move h-10 w-full absolute left-0 top-0" style="-webkit-app-region: drag;"></div>
             <div x-show="!isReady"
-                class="fixed left-0 flex h-full justify-center align-middle items-center min-h-screen w-full bg-white z-10">
+                class="fixed left-0 flex h-full justify-center align-middle items-center min-h-screen w-full bg-gray-900 z-10">
                 <div>
-                    <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
                         </circle>
@@ -28,12 +28,12 @@
                 x-transition:leave="duration-200 ease-in" x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100" x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0">
-                <div class="mx-auto w-full max-w-md"> 
+                <div class="mx-auto w-full max-w-md text-white"> 
                     <img class="mx-auto h-12 w-auto" src="./insight-logo.png"/>
                     <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900" x-text="prompt.title"></h2>
                     <p class="mt-2 text-center text-sm text-gray-600" x-text="prompt.subtitle"></p>
                 </div>
-                <div class="mt-8 mx-auto w-full max-w-md">
+                <div class="mt-8 mx-auto w-full max-w-md text-white">
                     <form class="space-y-6 px-6" @submit.prevent="activateLicense">
                         <template x-if="license.requireEmail">
                             <div>
